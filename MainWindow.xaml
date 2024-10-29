@@ -1,0 +1,20 @@
+﻿<Window x:Class="ArduinoLightTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Light Tracker" Height="500" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ListBox Name="lbFileSelector" Grid.Row="0" Margin="10" SelectionMode="Multiple"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10">
+            <Button Name="btnStart" Content="Start Recording" Click="BtnStart_Click" Margin="5" Height="30"/>
+            <Button Name="btnStop" Content="Stop Recording" Click="BtnStop_Click" Margin="5" Height="30" IsEnabled="False"/>
+            <Button Name="btnShowImage" Content="Show Image" Click="BtnShowImage_Click" Margin="5" Height="30"/>
+            <ProgressBar Name="pbRecordingProgress" Width="298" Height="30" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
